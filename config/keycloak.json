@@ -1,0 +1,11 @@
+{
+    "realm": "Nobel",
+    "auth-server-url": "http://localhost:8080/auth",
+    "ssl-required": "external",
+    "resource": "nobel-prize-app",
+    "credentials": {
+      "secret": "rulD2nK7GNq0hcO0isaK1bvHf5FpCRJS"
+    },
+    "confidential-port": 0
+  }
+  
