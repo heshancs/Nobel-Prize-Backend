@@ -8,7 +8,7 @@ module.exports = (pool) => {
   // Get all comments
   router.get('/comments', (req, res, next) => commentController.getAllComments(req, res, next));
 
-  // Post a new comment
+  // Laureat a new comment
   router.post('/comments', (req, res, next) => commentController.createComment(req, res, next));
 
   // Get a single comment by ID
@@ -21,7 +21,7 @@ module.exports = (pool) => {
   router.delete('/comments/:id', (req, res, next) => commentController.deleteComment(req, res, next));
 
    // Get all comments for a specific userId
-   router.get('/comments/post/:postId', (req, res, next) => commentController.getCommentsByPostId(req, res, next));
+   router.get('/comments/laureat/:laureatId', (req, res, next) => commentController.getCommentsByLaureatId(req, res, next));
 
   return router;
 };

@@ -25,9 +25,9 @@ class CommentController {
   }
 
   async createComment(req, res, next) {
-    const { postId, userId, text, firstname, lastname } = req.body;
+    const { laureatId, userId, text, firstname, lastname } = req.body;
     try {
-      const newComment = await this.commentModel.createComment({ postId, userId, text, firstname, lastname });
+      const newComment = await this.commentModel.createComment({ laureatId, userId, text, firstname, lastname });
       res.status(201).json(newComment);
     } catch (err) {
       next(err);
@@ -55,10 +55,10 @@ class CommentController {
     }
   }
 
-  async getCommentsByPostId(req, res, next) {
-    const { postId } = req.params;
+  async getCommentsByLaureatId(req, res, next) {
+    const { laureatId } = req.params;
     try {
-      const comments = await this.commentModel.getCommentsByPostId(postId)
+      const comments = await this.commentModel.getCommentsByLaureatId(laureatId)
       res.status(200).send(comments);
     } catch (err) {
       next(err);

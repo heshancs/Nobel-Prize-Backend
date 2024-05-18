@@ -26,11 +26,11 @@ class Comment {
       }
     }
   
-    async createComment({ postId, userId, text, firstname, lastname }) {
+    async createComment({ laureatId, userId, text, firstname, lastname }) {
       try {
         const result = await this.pool.query(
-          'INSERT INTO comments (post_id, user_id, text, firstname, lastname) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-          [postId, userId, text, firstname, lastname]
+          'INSERT INTO comments (laureat_id, user_id, text, firstname, lastname) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+          [laureatId, userId, text, firstname, lastname]
         );
         return result.rows[0];
       } catch (error) {
@@ -67,9 +67,9 @@ class Comment {
       }
     }
 
-    async getCommentsByPostId(postId) {
+    async getCommentsByLaureatId(laureatId) {
       try {
-        const result = await this.pool.query('SELECT * FROM comments WHERE post_id = $1', [postId]);
+        const result = await this.pool.query('SELECT * FROM comments WHERE laureat_id = $1', [laureatId]);
         return result.rows;
       } catch (error) {
         throw new Error(error.message);

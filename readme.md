@@ -40,9 +40,6 @@ git clone https://github.com/heshancs/Nobel-Prize-Backend.git
 ```
 
 #### 2.Create the .env file using .env.sample
-```bash
-mv .env.example .env
-```
 
 #### 3.Start the Application:
 ```bash
