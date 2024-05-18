@@ -36,7 +36,7 @@ git clone https://github.com/your-username/nobel-prize-backend.git
 #### 1.Clone the Repository:
 
 ```bash
-git clone https://github.com/<your-username>/nobel-prize-backend.git
+git clone https://github.com/heshancs/Nobel-Prize-Backend.git
 ```
 
 #### 2.Create the .env file using .env.sample
@@ -63,6 +63,13 @@ This will start the backend services using Docker Compose, streamlining the deve
 - In the left sidebar, click on "Master". This will display a list of existing realms.
 - Click on "Create Realm" to create a new realm for the Nobel Prize application.
 - Import the pre-created configuration file (`realm-export.json`) on the `/config `directory and create the realm.
+
+### Access the Nobel prize application
+
+- Run the frontend application https://github.com/heshancs/Nobel-Prize-Frontend
+- Navigate to http://localhost:5173
+- Register as a new user and log in to the system
+- Enjoy!
 
 ## Environment Variables
 
